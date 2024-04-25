@@ -5,7 +5,7 @@ SendMode "Input"
 SoundDir := A_ScriptDir "\sounds"
 LoadedSound := SoundDir "\script-loaded.mp3"
 FHeldSound := SoundDir "\f-held.mp3"
-FReleasedSound := SoundDir "\f-released.mp3"
+LeftClickHeldSound := SoundDir "\left-click-held.mp3"
 
 
 SoundPlay(LoadedSound)
@@ -25,6 +25,6 @@ F5::{
 
 ; When F6 is pressed, send the F key up event.
 F6::{
-    SendInput "{F up}"
-    SoundPlay(FReleasedSound)
+    SendInput "{Click down}"
+    SoundPlay(LeftClickHeldSound)
 }
